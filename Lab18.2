@@ -10,13 +10,13 @@ int main() {
 	int menu, quan = 0, i;
 	struct dev_sample
 	{
-		char name_prod[22] = { '0' };
-		char name_device[20] = { '0' };
-		int freq = 0;
-		float diss_pw = 0;
+		char name_prod[22];
+		char name_device[20];
+		int freq;
+		float diss_pw;
 	};
 
-	struct dev_sample dev_info[7];
+	struct dev_sample dev_info[7] = { '0' };
 
 	while (1) {
 		printf("1. Ввод данных о микропроцессорах (от 1 до 7);\n");
