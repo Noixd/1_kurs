@@ -5,4 +5,6 @@
 #include <stdio.h>
 #include <locale.h>
 
+int Sel_menu(void);
+
 #endif
