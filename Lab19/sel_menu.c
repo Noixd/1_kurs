@@ -1,7 +1,6 @@
 #include "Header.h"
 
-int Sel_menu(void) {
-	int u_sel;
+void Sel_menu(int *pmenu) {
 	printf("1. Ввод данных о устройствах (от 1 до 7);\n");
 	printf("2. Вывод количества введенных записей;\n");
 	printf("3. Вывод всех введенных данных в виде отформатированной таблицы;\n");
@@ -10,10 +9,11 @@ int Sel_menu(void) {
 	printf("6. Вывод самого медленного утройства в базе данных;\n");
 	printf("0. Выход из программы.\n");
 
-	while (scanf("%d", &u_sel) != 1 || u_sel < 0 || u_sel > 7) {
+	while (scanf("%d", pmenu) != 1 || *pmenu < 0 || *pmenu > 7) {
 		printf("Неверное введенное значение, попробуйте еще: ");
 		while (getchar() != '\n');
 	}
 
-	return u_sel;
+	return;
 }
+
