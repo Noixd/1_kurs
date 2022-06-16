@@ -1,5 +1,7 @@
 #include "Header.h"
 
+//Для 1 задания
+
 void File_W(double *a) {
 
 	FILE* data_file;
@@ -10,4 +12,5 @@ void File_W(double *a) {
 
 		fprintf(data_file, "%lf\n", a[i]);
 	}
+	return;
 }
