@@ -14,7 +14,7 @@ void File_R(void) {
 
 	for (int i = 0; i < 27; i++)
 	{
-		fscanf(data_file, "%lf", count);
+		fscanf(data_file, "%lf", &count);
 		printf("%lf\n", count);
 	}
 	return;
