@@ -11,6 +11,9 @@
 void Sort_bubble(double* a);
 void Sort_option(double* a);
 void File_W(double* a);
+void File_R(void);
+void BinaryW_F(double* a);
+void BinaryW_R(double* a, FILE* data_file);
 void mass_val(double* a);
 
 #endif
