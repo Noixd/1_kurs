@@ -3,24 +3,48 @@
 
 using namespace std;
 
-class square
+class Square
 {
 private:
 	double x1;
 	double y1;
 
 public:
-	square()
-	{
+	Square() {
 		x1 = 0;
 		y1 = 0;
 	}
 
-	void get(double x, double y)
-	{
-		cin >> x;
-		cin >> y;
+	Square(double inpx, double inpy) {
+		x1 = inpx;
+		y1 = inpy;
+	}
+
+	void Set() { 
+		cout << "Введите координаты" << endl;
+		cin >> x1;
+		cin >> y1;
+	}
+
+	void Get() {
+		cout << "Координаты точки:" << endl << "X1: " << x1 << endl << "Y1: " << y1 << endl;
+	}
+
+	double Area() {
+		return x1 * y1;
 	}
 };
 
-WIP
+int main() {
+	setlocale(LC_ALL, "ru");
+
+	Square sq1;
+
+	sq1.Set();
+
+	sq1.Get();
+
+	cout << "Площадь прямоугольника: " << sq1.Area() << endl;
+
+	return 0;
+}
