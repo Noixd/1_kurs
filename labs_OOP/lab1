@@ -1,0 +1,26 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+class square
+{
+private:
+	double x1;
+	double y1;
+
+public:
+	square()
+	{
+		x1 = 0;
+		y1 = 0;
+	}
+
+	void get(double x, double y)
+	{
+		cin >> x;
+		cin >> y;
+	}
+};
+
+WIP
