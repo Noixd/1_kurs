@@ -20,18 +20,38 @@ public:
 		y1 = inpy;
 	}
 
+	Square(const Square &copy) {
+		cout << "Copy" << endl;
+		x1 = copy.x1;
+		y1 = copy.y1;
+	}
+
+	~Square() {
+		cout << "Destructor" << endl;
+	}
+
 	void Set() { 
-		cout << "Введите координаты" << endl;
+		cout << "Введите X" << endl;
 		cin >> x1;
+		cout << "Введите Y" << endl;
 		cin >> y1;
 	}
 
 	void Get() {
-		cout << "Координаты точки:" << endl << "X1: " << x1 << endl << "Y1: " << y1 << endl;
+		cout << "Координаты точки:" << endl << "X1: " << x1 << "px" << endl << "Y1: " << y1 << "px" << endl;
 	}
 
 	double Area() {
 		return x1 * y1;
+	}
+
+	void DI() {
+		int i = 1000;
+		while (i>0)
+		{
+			cout << i << endl;
+			i -= 7;
+		}
 	}
 };
 
@@ -40,11 +60,21 @@ int main() {
 
 	Square sq1;
 
+	sq1.Get();
+
+	sq1.~Square();
+
 	sq1.Set();
 
 	sq1.Get();
 
 	cout << "Площадь прямоугольника: " << sq1.Area() << endl;
+
+	Square sq2 = sq1;
+
+	sq2.Get();
+
+	sq2.DI();
 
 	return 0;
 }
